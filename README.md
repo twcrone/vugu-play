@@ -1,13 +1,13 @@
-# simple
-Simple Vugu Example
+# Vugo Love Notes
+Simple web UI for listing love notes
 
 You can get started with:
 
 ```sh
-go get -u github.com/vugu/vgrun
-vgrun -new-from-example=simple myexample
-cd myexample
+cd vugu-play
 vgrun devserver.go
 ```
 
 Then browse to the running server: http://localhost:8844/
+
+Click the button
