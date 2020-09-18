@@ -1,3 +1,5 @@
+<html>
+<body>
 <div>
     <main role="main" class="container text-center">
 
@@ -47,3 +49,5 @@
 import "time"
 
 </script>
+</body>
+</html>
