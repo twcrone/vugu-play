@@ -2,11 +2,10 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"github.com/vugu/vugu"
+	"log"
+	"net/http"
 )
-import "net/http"
-import "log"
 
 type Root struct {
 	Resp      resp `vugu:"data"`
@@ -23,9 +22,6 @@ type note struct {
 }
 
 func (c *Root) HandleClick(event vugu.DOMEvent) {
-	fmt.Println("HELLO")
-	//c.Notes
-
 	ee := event.EventEnv()
 
 	go func() {
@@ -35,7 +31,6 @@ func (c *Root) HandleClick(event vugu.DOMEvent) {
 		ee.UnlockRender()
 
 		res, err := http.Get("https://go-love-notes.herokuapp.com/notes")
-		fmt.Println(res.Body)
 		if err != nil {
 			log.Printf("Error fetch()ing: %v", err)
 			return
